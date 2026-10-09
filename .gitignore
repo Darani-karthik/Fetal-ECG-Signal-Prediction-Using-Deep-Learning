@@ -1,5 +1,6 @@
-# Data (downloaded / generated locally, see README)
-data/
+# Data (downloaded / generated locally, see README). Anchored so that the
+# source package src/fecg/data/ is not ignored.
+/data/
 
 # Checkpoints other than the released one
 checkpoints/*
