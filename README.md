@@ -1,6 +1,6 @@
 # Fetal ECG Extraction with Scalograms and a U-Net
 
-[![tests](https://github.com/OWNER/REPO/actions/workflows/ci.yml/badge.svg)](https://github.com/OWNER/REPO/actions/workflows/ci.yml)
+[![tests](https://github.com/Darani-karthik/Fetal-ECG-Signal-Prediction-Using-Deep-Learning/actions/workflows/ci.yml/badge.svg)](https://github.com/Darani-karthik/Fetal-ECG-Signal-Prediction-Using-Deep-Learning/actions/workflows/ci.yml)
 ![python](https://img.shields.io/badge/python-3.9%2B-blue)
 ![pytorch](https://img.shields.io/badge/PyTorch-2.x-ee4c2c)
 ![license](https://img.shields.io/badge/license-MIT-green)
@@ -171,7 +171,7 @@ The old setting is one command away: `--set data.bandpass=[0.5,100] cwt.fmin=1.0
 ## Quick start
 
 ```bash
-git clone https://github.com/OWNER/REPO.git && cd REPO
+git clone https://github.com/Darani-karthik/Fetal-ECG-Signal-Prediction-Using-Deep-Learning.git && cd Fetal-ECG-Signal-Prediction-Using-Deep-Learning
 python -m venv .venv && source .venv/bin/activate        # Windows: .venv\Scripts\activate
 pip install -e ".[dev]"                                   # installs PyTorch, PyWavelets, ...
 
@@ -221,7 +221,7 @@ python scripts/preprocess.py --set data.bandpass=[0.5,100] cwt.fmin=1.0 data.pro
 ## Project structure
 
 ```
-fetal-ecg-unet/
+Fetal-ECG-Signal-Prediction-Using-Deep-Learning/
 ├── configs/default.yaml          all hyper-parameters
 ├── scripts/                      command-line entry points
 │   ├── download_data.py          fetch + verify the PhysioNet records
