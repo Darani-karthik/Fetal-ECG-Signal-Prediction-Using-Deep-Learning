@@ -1,0 +1,86 @@
+{
+  "test_records": [
+    "r10"
+  ],
+  "checkpoint": "unet_best.pt",
+  "per_record": [
+    {
+      "record": "r10",
+      "scalogram": {
+        "mse": 0.012729096226394176,
+        "rmse": 0.11282329647016248,
+        "mae": 0.046278081834316254
+      },
+      "waveform": {
+        "correlation": 0.19522161781787872,
+        "correlation_window_median": 0.3308875262737274,
+        "correlation_window_min": -0.048372965306043625,
+        "rmse": 1.0218675136566162,
+        "snr_in_db": 0.009504755958914757,
+        "snr_out_db": 0.17176169157028198,
+        "snr_gain_db": 0.16225693561136723,
+        "transform_ceiling_correlation": 0.7149378021542641
+      },
+      "beats": {
+        "unet": {
+          "precision": 0.9476439790575916,
+          "recall": 0.8591772151898734,
+          "f1": 0.9012448132780083,
+          "tp": 543,
+          "fp": 30,
+          "fn": 89
+        },
+        "direct_fetal_ecg_detector": {
+          "precision": 1.0,
+          "recall": 0.9936708860759493,
+          "f1": 0.9968253968253968,
+          "tp": 628,
+          "fp": 0,
+          "fn": 4
+        },
+        "best_raw_abdominal_lead": {
+          "precision": 0.18487394957983194,
+          "recall": 0.13924050632911392,
+          "f1": 0.1588447653429603,
+          "tp": 88,
+          "fp": 388,
+          "fn": 544
+        }
+      }
+    }
+  ],
+  "aggregate": {
+    "scalogram": {
+      "mse": 0.012729096226394176,
+      "rmse": 0.11282329647016248,
+      "mae": 0.046278081834316254
+    },
+    "waveform": {
+      "correlation": 0.19522161781787872,
+      "correlation_window_median": 0.3308875262737274,
+      "correlation_window_min": -0.048372965306043625,
+      "rmse": 1.0218675136566162,
+      "snr_in_db": 0.009504755958914757,
+      "snr_out_db": 0.17176169157028198,
+      "snr_gain_db": 0.16225693561136723,
+      "transform_ceiling_correlation": 0.7149378021542641
+    },
+    "beats": {
+      "unet": {
+        "precision": 0.9476439790575916,
+        "recall": 0.8591772151898734,
+        "f1": 0.9012448132780083
+      },
+      "direct_fetal_ecg_detector": {
+        "precision": 1.0,
+        "recall": 0.9936708860759493,
+        "f1": 0.9968253968253968
+      },
+      "best_raw_abdominal_lead": {
+        "precision": 0.18487394957983194,
+        "recall": 0.13924050632911392,
+        "f1": 0.1588447653429603
+      }
+    }
+  }
+}

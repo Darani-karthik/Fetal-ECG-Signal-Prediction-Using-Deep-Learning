@@ -1,0 +1,492 @@
+{
+  "folds": [
+    {
+      "test_records": [
+        "r01"
+      ],
+      "checkpoint": "fold0/checkpoint/unet_best.pt",
+      "per_record": [
+        {
+          "record": "r01",
+          "scalogram": {
+            "mse": 0.004837181884795427,
+            "rmse": 0.06954985179563956,
+            "mae": 0.03392767161130905
+          },
+          "waveform": {
+            "correlation": 0.8857746124267578,
+            "correlation_window_median": 0.9328678846359253,
+            "correlation_window_min": 0.5762800574302673,
+            "rmse": 0.4779512882232666,
+            "snr_in_db": 0.5050929188728333,
+            "snr_out_db": 6.682732105255127,
+            "snr_gain_db": 6.177639186382294,
+            "transform_ceiling_correlation": 0.9942019165681717
+          },
+          "beats": {
+            "unet": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 640,
+              "fp": 0,
+              "fn": 0
+            },
+            "direct_fetal_ecg_detector": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 640,
+              "fp": 0,
+              "fn": 0
+            },
+            "best_raw_abdominal_lead": {
+              "precision": 0.4672489082969432,
+              "recall": 0.334375,
+              "f1": 0.389799635701275,
+              "tp": 214,
+              "fp": 244,
+              "fn": 426
+            }
+          }
+        }
+      ],
+      "aggregate": {
+        "scalogram": {
+          "mse": 0.004837181884795427,
+          "rmse": 0.06954985179563956,
+          "mae": 0.03392767161130905
+        },
+        "waveform": {
+          "correlation": 0.8857746124267578,
+          "correlation_window_median": 0.9328678846359253,
+          "correlation_window_min": 0.5762800574302673,
+          "rmse": 0.4779512882232666,
+          "snr_in_db": 0.5050929188728333,
+          "snr_out_db": 6.682732105255127,
+          "snr_gain_db": 6.177639186382294,
+          "transform_ceiling_correlation": 0.9942019165681717
+        },
+        "beats": {
+          "unet": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "direct_fetal_ecg_detector": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "best_raw_abdominal_lead": {
+            "precision": 0.4672489082969432,
+            "recall": 0.334375,
+            "f1": 0.389799635701275
+          }
+        }
+      }
+    },
+    {
+      "test_records": [
+        "r04"
+      ],
+      "checkpoint": "fold1/checkpoint/unet_best.pt",
+      "per_record": [
+        {
+          "record": "r04",
+          "scalogram": {
+            "mse": 0.030155494809150696,
+            "rmse": 0.17365337546143667,
+            "mae": 0.0883747860789299
+          },
+          "waveform": {
+            "correlation": 0.4905353784561157,
+            "correlation_window_median": 0.5429835319519043,
+            "correlation_window_min": -0.02008209004998207,
+            "rmse": 0.9081755876541138,
+            "snr_in_db": 0.04195048660039902,
+            "snr_out_db": 1.2208212614059448,
+            "snr_gain_db": 1.1788707748055458,
+            "transform_ceiling_correlation": 0.9934891638044872
+          },
+          "beats": {
+            "unet": {
+              "precision": 0.946843853820598,
+              "recall": 0.9076433121019108,
+              "f1": 0.9268292682926829,
+              "tp": 570,
+              "fp": 32,
+              "fn": 58
+            },
+            "direct_fetal_ecg_detector": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 628,
+              "fp": 0,
+              "fn": 0
+            },
+            "best_raw_abdominal_lead": {
+              "precision": 0.23130841121495327,
+              "recall": 0.15764331210191082,
+              "f1": 0.18749999999999997,
+              "tp": 99,
+              "fp": 329,
+              "fn": 529
+            }
+          }
+        }
+      ],
+      "aggregate": {
+        "scalogram": {
+          "mse": 0.030155494809150696,
+          "rmse": 0.17365337546143667,
+          "mae": 0.0883747860789299
+        },
+        "waveform": {
+          "correlation": 0.4905353784561157,
+          "correlation_window_median": 0.5429835319519043,
+          "correlation_window_min": -0.02008209004998207,
+          "rmse": 0.9081755876541138,
+          "snr_in_db": 0.04195048660039902,
+          "snr_out_db": 1.2208212614059448,
+          "snr_gain_db": 1.1788707748055458,
+          "transform_ceiling_correlation": 0.9934891638044872
+        },
+        "beats": {
+          "unet": {
+            "precision": 0.946843853820598,
+            "recall": 0.9076433121019108,
+            "f1": 0.9268292682926829
+          },
+          "direct_fetal_ecg_detector": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "best_raw_abdominal_lead": {
+            "precision": 0.23130841121495327,
+            "recall": 0.15764331210191082,
+            "f1": 0.18749999999999997
+          }
+        }
+      }
+    },
+    {
+      "test_records": [
+        "r07"
+      ],
+      "checkpoint": "fold2/checkpoint/unet_best.pt",
+      "per_record": [
+        {
+          "record": "r07",
+          "scalogram": {
+            "mse": 0.023384084925055504,
+            "rmse": 0.15291855650984776,
+            "mae": 0.06894700974225998
+          },
+          "waveform": {
+            "correlation": 0.603452742099762,
+            "correlation_window_median": 0.7237961888313293,
+            "correlation_window_min": 0.29146894812583923,
+            "rmse": 0.8092818856239319,
+            "snr_in_db": 0.03357856348156929,
+            "snr_out_db": 1.9694163799285889,
+            "snr_gain_db": 1.9358378164470196,
+            "transform_ceiling_correlation": 0.9950375414441625
+          },
+          "beats": {
+            "unet": {
+              "precision": 1.0,
+              "recall": 0.9791332263242376,
+              "f1": 0.9894566098945661,
+              "tp": 610,
+              "fp": 0,
+              "fn": 13
+            },
+            "direct_fetal_ecg_detector": {
+              "precision": 0.9983922829581994,
+              "recall": 0.9967897271268058,
+              "f1": 0.9975903614457832,
+              "tp": 621,
+              "fp": 1,
+              "fn": 2
+            },
+            "best_raw_abdominal_lead": {
+              "precision": 0.20802005012531327,
+              "recall": 0.1332263242375602,
+              "f1": 0.162426614481409,
+              "tp": 83,
+              "fp": 316,
+              "fn": 540
+            }
+          }
+        }
+      ],
+      "aggregate": {
+        "scalogram": {
+          "mse": 0.023384084925055504,
+          "rmse": 0.15291855650984776,
+          "mae": 0.06894700974225998
+        },
+        "waveform": {
+          "correlation": 0.603452742099762,
+          "correlation_window_median": 0.7237961888313293,
+          "correlation_window_min": 0.29146894812583923,
+          "rmse": 0.8092818856239319,
+          "snr_in_db": 0.03357856348156929,
+          "snr_out_db": 1.9694163799285889,
+          "snr_gain_db": 1.9358378164470196,
+          "transform_ceiling_correlation": 0.9950375414441625
+        },
+        "beats": {
+          "unet": {
+            "precision": 1.0,
+            "recall": 0.9791332263242376,
+            "f1": 0.9894566098945661
+          },
+          "direct_fetal_ecg_detector": {
+            "precision": 0.9983922829581994,
+            "recall": 0.9967897271268058,
+            "f1": 0.9975903614457832
+          },
+          "best_raw_abdominal_lead": {
+            "precision": 0.20802005012531327,
+            "recall": 0.1332263242375602,
+            "f1": 0.162426614481409
+          }
+        }
+      }
+    },
+    {
+      "test_records": [
+        "r08"
+      ],
+      "checkpoint": "fold3/checkpoint/unet_best.pt",
+      "per_record": [
+        {
+          "record": "r08",
+          "scalogram": {
+            "mse": 0.0033427574671804905,
+            "rmse": 0.057816584706989485,
+            "mae": 0.028114866465330124
+          },
+          "waveform": {
+            "correlation": 0.9039360284805298,
+            "correlation_window_median": 0.9526911377906799,
+            "correlation_window_min": 0.39982759952545166,
+            "rmse": 0.4466744065284729,
+            "snr_in_db": 0.7532217502593994,
+            "snr_out_db": 7.323057651519775,
+            "snr_gain_db": 6.569835901260376,
+            "transform_ceiling_correlation": 0.9945139196011022
+          },
+          "beats": {
+            "unet": {
+              "precision": 0.9969088098918083,
+              "recall": 0.9984520123839009,
+              "f1": 0.9976798143851509,
+              "tp": 645,
+              "fp": 2,
+              "fn": 1
+            },
+            "direct_fetal_ecg_detector": {
+              "precision": 0.9953051643192489,
+              "recall": 0.9845201238390093,
+              "f1": 0.9898832684824904,
+              "tp": 636,
+              "fp": 3,
+              "fn": 10
+            },
+            "best_raw_abdominal_lead": {
+              "precision": 0.668859649122807,
+              "recall": 0.47213622291021673,
+              "f1": 0.5535390199637024,
+              "tp": 305,
+              "fp": 151,
+              "fn": 341
+            }
+          }
+        }
+      ],
+      "aggregate": {
+        "scalogram": {
+          "mse": 0.0033427574671804905,
+          "rmse": 0.057816584706989485,
+          "mae": 0.028114866465330124
+        },
+        "waveform": {
+          "correlation": 0.9039360284805298,
+          "correlation_window_median": 0.9526911377906799,
+          "correlation_window_min": 0.39982759952545166,
+          "rmse": 0.4466744065284729,
+          "snr_in_db": 0.7532217502593994,
+          "snr_out_db": 7.323057651519775,
+          "snr_gain_db": 6.569835901260376,
+          "transform_ceiling_correlation": 0.9945139196011022
+        },
+        "beats": {
+          "unet": {
+            "precision": 0.9969088098918083,
+            "recall": 0.9984520123839009,
+            "f1": 0.9976798143851509
+          },
+          "direct_fetal_ecg_detector": {
+            "precision": 0.9953051643192489,
+            "recall": 0.9845201238390093,
+            "f1": 0.9898832684824904
+          },
+          "best_raw_abdominal_lead": {
+            "precision": 0.668859649122807,
+            "recall": 0.47213622291021673,
+            "f1": 0.5535390199637024
+          }
+        }
+      }
+    },
+    {
+      "test_records": [
+        "r10"
+      ],
+      "checkpoint": "fold4/checkpoint/unet_best.pt",
+      "per_record": [
+        {
+          "record": "r10",
+          "scalogram": {
+            "mse": 0.010511592030525208,
+            "rmse": 0.10252605537386683,
+            "mae": 0.05281585454940796
+          },
+          "waveform": {
+            "correlation": 0.5072256326675415,
+            "correlation_window_median": 0.5542570352554321,
+            "correlation_window_min": -0.04088977724313736,
+            "rmse": 0.8745880722999573,
+            "snr_in_db": 0.04010062664747238,
+            "snr_out_db": 1.3171160221099854,
+            "snr_gain_db": 1.277015395462513,
+            "transform_ceiling_correlation": 0.9927092611295745
+          },
+          "beats": {
+            "unet": {
+              "precision": 0.9485530546623794,
+              "recall": 0.9335443037974683,
+              "f1": 0.9409888357256778,
+              "tp": 590,
+              "fp": 32,
+              "fn": 42
+            },
+            "direct_fetal_ecg_detector": {
+              "precision": 1.0,
+              "recall": 0.9936708860759493,
+              "f1": 0.9968253968253968,
+              "tp": 628,
+              "fp": 0,
+              "fn": 4
+            },
+            "best_raw_abdominal_lead": {
+              "precision": 0.18487394957983194,
+              "recall": 0.13924050632911392,
+              "f1": 0.1588447653429603,
+              "tp": 88,
+              "fp": 388,
+              "fn": 544
+            }
+          }
+        }
+      ],
+      "aggregate": {
+        "scalogram": {
+          "mse": 0.010511592030525208,
+          "rmse": 0.10252605537386683,
+          "mae": 0.05281585454940796
+        },
+        "waveform": {
+          "correlation": 0.5072256326675415,
+          "correlation_window_median": 0.5542570352554321,
+          "correlation_window_min": -0.04088977724313736,
+          "rmse": 0.8745880722999573,
+          "snr_in_db": 0.04010062664747238,
+          "snr_out_db": 1.3171160221099854,
+          "snr_gain_db": 1.277015395462513,
+          "transform_ceiling_correlation": 0.9927092611295745
+        },
+        "beats": {
+          "unet": {
+            "precision": 0.9485530546623794,
+            "recall": 0.9335443037974683,
+            "f1": 0.9409888357256778
+          },
+          "direct_fetal_ecg_detector": {
+            "precision": 1.0,
+            "recall": 0.9936708860759493,
+            "f1": 0.9968253968253968
+          },
+          "best_raw_abdominal_lead": {
+            "precision": 0.18487394957983194,
+            "recall": 0.13924050632911392,
+            "f1": 0.1588447653429603
+          }
+        }
+      }
+    }
+  ],
+  "summary": {
+    "waveform.correlation": {
+      "mean": 0.6781848788261413,
+      "std": 0.18115262634727672
+    },
+    "waveform.correlation_window_median": {
+      "mean": 0.7413191556930542,
+      "std": 0.1766382412109881
+    },
+    "waveform.snr_gain_db": {
+      "mean": 3.4278398148715494,
+      "std": 2.4225405416648034
+    },
+    "scalogram.rmse": {
+      "mean": 0.11129288476955605,
+      "std": 0.04538850099983234
+    },
+    "scalogram.mae": {
+      "mean": 0.0544360376894474,
+      "std": 0.022264002692119905
+    },
+    "beats.unet.precision": {
+      "mean": 0.9784611436749572,
+      "std": 0.025148788672812315
+    },
+    "beats.unet.recall": {
+      "mean": 0.9637545709215034,
+      "std": 0.036919588895711536
+    },
+    "beats.unet.f1": {
+      "mean": 0.9709909056596155,
+      "std": 0.030806434560173644
+    },
+    "beats.direct_fetal_ecg_detector.precision": {
+      "mean": 0.9987394894554896,
+      "std": 0.0018265706661195003
+    },
+    "beats.direct_fetal_ecg_detector.recall": {
+      "mean": 0.9949961474083528,
+      "std": 0.005741034700276919
+    },
+    "beats.direct_fetal_ecg_detector.f1": {
+      "mean": 0.996859805350734,
+      "std": 0.0037129128106959085
+    },
+    "beats.best_raw_abdominal_lead.precision": {
+      "mean": 0.3520621936679697,
+      "std": 0.188101106357206
+    },
+    "beats.best_raw_abdominal_lead.recall": {
+      "mean": 0.24732427311576033,
+      "std": 0.13480456904039256
+    },
+    "beats.best_raw_abdominal_lead.f1": {
+      "mean": 0.29042200709786936,
+      "std": 0.157095388952191
+    }
+  }
+}

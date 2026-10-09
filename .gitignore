@@ -1,0 +1,31 @@
+# Data (downloaded / generated locally, see README)
+data/
+
+# Checkpoints other than the released one
+checkpoints/*
+!checkpoints/unet_best.pt
+!checkpoints/history.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+
+# Environments
+.venv/
+venv/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Cross-validation fold checkpoints (metrics are kept)
+results/cv/fold*/checkpoint/
+
+# Local inference outputs
+results/predictions/

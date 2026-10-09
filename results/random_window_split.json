@@ -1,0 +1,11 @@
+{
+  "split": "random windows (leaky - for comparison only)",
+  "test_windows": 291,
+  "scalogram": {
+    "mse": 0.0007127501603869619,
+    "rmse": 0.02359667252092798,
+    "mae": 0.014648096623136006
+  },
+  "waveform_correlation_mean": 0.9748567933427918,
+  "waveform_correlation_median": 0.9845949411392212
+}

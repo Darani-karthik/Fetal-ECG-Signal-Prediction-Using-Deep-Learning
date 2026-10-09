@@ -1,0 +1,53 @@
+# Default configuration: scalogram (CWT) + U-Net fetal ECG extraction.
+seed: 42
+
+data:
+  raw_dir: data/raw
+  processed_dir: data/processed
+  fs_raw: 1000            # Hz, native sampling rate of adfecgdb
+  fs: 250                 # Hz, rate after anti-aliased down-sampling
+  # Zero-phase Butterworth band-pass (order 4). The report used 0.5-100 Hz, but 25-82 % (median
+  # 60 %) of the variance of the scalp reference lies below 2 Hz and is electrode baseline drift
+  # that cannot be predicted from the abdomen (see README, "Findings"), so we high-pass at 2 Hz,
+  # just below the fetal heart-rate fundamental (~2.1-2.5 Hz). Use
+  # `--set data.bandpass=[0.5,100] cwt.fmin=1.0` to reproduce the report's setting.
+  bandpass: [2.0, 100.0]  # Hz
+  abdominal_channels: [Abdomen_1, Abdomen_2, Abdomen_3, Abdomen_4]
+  fetal_channel: Direct_1 # direct fetal scalp ECG = ground truth
+  # Subject-wise split: the network never sees the test subject during training.
+  split:
+    train: [r01, r04, r07]
+    val: [r08]
+    test: [r10]
+
+cwt:
+  wavelet: cmor1.5-1.0    # complex Morlet (bandwidth 1.5, centre frequency 1.0)
+  n_scales: 64            # image height
+  fmin: 2.0               # Hz (matches the band-pass low cut-off)
+  fmax: 100.0             # Hz
+  window: 512             # samples per image (2.048 s at 250 Hz) -> image width
+  stride: 128             # hop between training windows / inference overlap
+
+model:
+  in_channels: 8          # 4 abdominal channels x (magnitude, phase)
+  out_channels: 2         # real and imaginary part of the fetal scalogram
+  base_channels: 16       # first-stage width (doubles per stage) -> 1.9 M parameters
+  depth: 4                # number of down-sampling stages
+  dropout: 0.2            # channel dropout inside every conv block
+
+train:
+  epochs: 30              # the report used 20; the smaller, regularised net converges slower
+  batch_size: 16
+  lr: 1.0e-3
+  weight_decay: 1.0e-2
+  mag_weight: 0.5         # weight of the scalogram-magnitude term in the loss
+  signal_weight: 1.0      # weight of the time-domain term (inverse CWT of the output)
+  corr_weight: 1.0        # weight of the (1 - Pearson) waveform term
+  augment: true           # lead shuffle / gain jitter / polarity flip on the training set
+  amp: true               # mixed precision on CUDA
+  num_workers: 0
+  checkpoint_dir: checkpoints
+
+evaluate:
+  beat_tolerance_ms: 50   # a detection within +-50 ms of an annotated beat is a hit
+  results_dir: results
